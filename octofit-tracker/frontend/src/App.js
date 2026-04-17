@@ -1,7 +1,7 @@
 
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link, NavLink } from 'react-router-dom';
-import logo from '../public/octofitapp-small.png';
+const logo = process.env.PUBLIC_URL + '/octofitapp-small.png';
 import Activities from './components/Activities';
 import Leaderboard from './components/Leaderboard';
 import Teams from './components/Teams';
