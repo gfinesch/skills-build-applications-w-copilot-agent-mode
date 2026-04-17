@@ -35,7 +35,7 @@ def api_root(request, format=None):
     if codespace_name:
         base_url = f"https://{codespace_name}-8000.app.github.dev/api/"
     else:
-        # fallback to request.build_absolute_uri('/')
+        # fallback to request.build_absolute_uri('/') for localhost
         base_url = request.build_absolute_uri('/api/')
     return Response({
         'users': base_url + 'users/',
