@@ -5,15 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// Set the codespace URL for API calls
-const codespaceName = process.env.REACT_APP_CODESPACE_NAME;
-const protocol = window.location.protocol;
-const port = '8000';
-const codespaceUrl = codespaceName
-  ? `${protocol}//${codespaceName}-${port}.app.github.dev`
-  : '';
-process.env.REACT_APP_CODESPACE_URL = codespaceUrl;
-console.log('REACT_APP_CODESPACE_URL:', codespaceUrl);
+// Usa solo la variabile d'ambiente impostata da .env
+console.log('REACT_APP_CODESPACE_URL:', process.env.REACT_APP_CODESPACE_URL);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
